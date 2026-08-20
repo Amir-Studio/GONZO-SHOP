@@ -1,0 +1,288 @@
+/* ============================================================
+   CART.CSS — صفحه سبد خرید (Premium)
+   ============================================================ */
+
+.cart-page {
+    padding: 32px 0 60px;
+    background: var(--color-bg);
+    min-height: 70vh;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 32px;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+/* ============================================================
+   کارت سبد خرید
+   ============================================================ */
+.cart-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    min-height: 120px;
+    transition: border-color var(--transition-fast);
+}
+
+.cart-card:hover {
+    border-color: rgba(139, 92, 246, 0.1);
+}
+
+/* ============================================================
+   خالی بودن سبد
+   ============================================================ */
+.empty-cart {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.empty-cart .empty-icon {
+    font-size: 48px;
+    opacity: 0.4;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.empty-cart h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 6px;
+}
+
+.empty-cart p {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+}
+
+.empty-cart .btn {
+    padding: 12px 32px;
+}
+
+/* ============================================================
+   آیتم‌های سبد
+   ============================================================ */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: background var(--transition-fast);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-image {
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cart-item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.cart-item-id {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    letter-spacing: 0.3px;
+}
+
+.cart-item-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.cart-item-stats {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+}
+
+.cart-item-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-top: 2px;
+}
+
+.cart-item-remove {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: all var(--transition-fast);
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.cart-item-remove:hover {
+    color: #EF4444;
+    background: rgba(239, 68, 68, 0.06);
+}
+
+/* ============================================================
+   خلاصه سبد (پایین صفحه)
+   ============================================================ */
+.cart-summary {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 2px solid var(--color-border);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: var(--color-text-secondary);
+}
+
+.summary-row .summary-label {
+    font-weight: 400;
+}
+
+.summary-row .summary-value {
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+.total-row {
+    padding-top: 12px;
+    border-top: 1px solid var(--color-border);
+    font-size: 20px;
+}
+
+.total-row .summary-label {
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.total-row .summary-value {
+    font-weight: 700;
+    color: var(--color-accent);
+    font-size: 22px;
+}
+
+.cart-summary .btn-primary {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    background: var(--color-accent);
+    color: #FFFFFF;
+    border: none;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+}
+
+.cart-summary .btn-primary:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.25);
+}
+
+/* ============================================================
+   ریسپانسیو
+   ============================================================ */
+@media (max-width: 640px) {
+    .cart-page {
+        padding: 16px 0 32px;
+    }
+    .page-title {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+    .cart-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+    .cart-item {
+        gap: 12px;
+        padding: 12px 0;
+        flex-wrap: wrap;
+    }
+    .cart-item-image {
+        width: 52px;
+        height: 52px;
+    }
+    .cart-item-title {
+        font-size: 15px;
+    }
+    .cart-item-price {
+        font-size: 14px;
+    }
+    .cart-item-remove {
+        font-size: 18px;
+        padding: 4px 8px;
+    }
+    .cart-summary {
+        padding: 16px;
+        gap: 12px;
+    }
+    .total-row {
+        font-size: 18px;
+    }
+    .total-row .summary-value {
+        font-size: 19px;
+    }
+    .cart-summary .btn-primary {
+        font-size: 15px;
+        padding: 12px;
+    }
+    .empty-cart .empty-icon {
+        font-size: 40px;
+    }
+    .empty-cart h3 {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .cart-card {
+        padding: 20px 24px;
+    }
+    .cart-summary {
+        padding: 20px 24px;
+    }
+}
