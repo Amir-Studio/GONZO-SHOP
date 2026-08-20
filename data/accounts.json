@@ -1,0 +1,74 @@
+[
+  {
+    "id": "AK-001",
+    "title": "اکانت ۱",
+    "price": 2500000,
+    "mythic": 4,
+    "legendary": 16,
+    "legendarySkins": "اسکین‌های خاص و ارزشمند",
+    "cp": -7500,
+    "images": [
+      "assets/images/accounts/1.jpg",
+      "assets/images/accounts/1-2.jpg"
+    ]
+  },
+  {
+    "id": "AK-002",
+    "title": "اکانت ۲",
+    "price": 1800000,
+    "mythic": 1,
+    "legendary": 6,
+    "legendarySkins": 1,
+    "images": [
+      "assets/images/accounts/2.jpg",
+      "assets/images/accounts/2-2.jpg"
+    ]
+  },
+  {
+    "id": "AK-003",
+    "title": "اکانت ۳",
+    "price": 3800000,
+    "witchWarden": true,
+    "legendarySkins": 1,
+    "images": [
+      "assets/images/accounts/3.jpg",
+      "assets/images/accounts/3-2.jpg"
+    ]
+  },
+  {
+    "id": "AK-004",
+    "title": "اکانت ۴",
+    "price": 950000,
+    "mythic": 1,
+    "legendary": 5,
+    "images": [
+      "assets/images/accounts/4.jpg",
+      "assets/images/accounts/4-2.jpg"
+    ]
+  },
+  {
+    "id": "AK-005",
+    "title": "اکانت ۵",
+    "price": 2900000,
+    "mythic": 1,
+    "legendary": 2,
+    "legendarySkins": 2,
+    "images": [
+      "assets/images/accounts/5.jpg",
+      "assets/images/accounts/5-2.jpg"
+    ]
+  },
+  {
+    "id": "AK-006",
+    "title": "اکانت ۶",
+    "price": 4500000,
+    "mythic": 6,
+    "legendary": 10,
+    "mythicSkins": 1,
+    "images": [
+      "assets/images/accounts/6.jpg",
+      "assets/images/accounts/6-2.jpg",
+      "assets/images/accounts/6-3.jpg"
+    ]
+  }
+]
