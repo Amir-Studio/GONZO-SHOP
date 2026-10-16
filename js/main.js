@@ -12,7 +12,7 @@ const accountsGrid = document.getElementById('accountsGrid');
 // ============================================================
 // رمز مدیریت (اینجا!)
 // ============================================================
-const ADMIN_PASSWORD = 'Ha8aunI8je8bV';
+const ADMIN_PASSWORD = null; // احراز هویت پنل باید سمت سرور باشد
 
 function openDrawer() {
     drawer.classList.add('open');
@@ -383,9 +383,13 @@ adminCodeSubmit.addEventListener('click', function() {
         return;
     }
 
-    // چک کردن رمز
+    // رمز سمت مرورگر قابل استخراج است؛ پنل تا راه‌اندازی احراز هویت امن غیرفعال می‌ماند.
+    if (!ADMIN_PASSWORD) {
+        adminLoginError.textContent = 'پنل مدیریت تا اتصال به احراز هویت امن سمت سرور غیرفعال است.';
+        adminLoginError.classList.add('show');
+        return;
+    }
     if (code === ADMIN_PASSWORD) {
-        // ساخت یک توکن ساده برای جلسه
         adminToken = 'admin-token-' + Date.now();
         sessionStorage.setItem('adminToken', adminToken);
         closeAdminLogin();
