@@ -426,7 +426,7 @@ const adminSaveSoroush = document.getElementById('adminSaveSoroush');
 
 function loadAdminConfig() {
     adminCardNumber.value = CONFIG.cardNumber || '5022 2915 2835 2154';
-    adminSoroushId.value = CONFIG.adminSoroushId || '@ID_KYAN';
+    adminSoroushId.value = CONFIG.adminSoroushId || '۰۹۰۲۵۱۳۱۵۰۶';
 }
 adminSaveCard.addEventListener('click', function() {
     CONFIG.cardNumber = adminCardNumber.value.trim();
@@ -439,7 +439,7 @@ adminSaveSoroush.addEventListener('click', function() {
     document.getElementById('supportAdminId').textContent = CONFIG.adminSoroushId;
     const config = { cardNumber: CONFIG.cardNumber, adminSoroushId: CONFIG.adminSoroushId };
     localStorage.setItem('gonzoShopConfig', JSON.stringify(config));
-    alert('آیدی سروش‌پلاس در localStorage ذخیره شد. برای ذخیره روی سرور، دکمه پایین را بزنید.');
+    alert('شماره تماس پشتیبانی در localStorage ذخیره شد. برای ذخیره روی سرور، دکمه پایین را بزنید.');
 });
 
 function addSaveServerButton() {
