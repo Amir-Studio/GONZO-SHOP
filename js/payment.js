@@ -52,8 +52,10 @@ function renderPaymentInfo() {
     const total = sessionStorage.getItem('checkoutTotal') || '0';
     totalAmount.textContent = `${Number(total).toLocaleString()} تومان`;
     cardDisplay.textContent = CONFIG.cardNumber;
-    adminDisplay.textContent = CONFIG.adminSoroushId;
-    if (adminGuide) adminGuide.textContent = CONFIG.adminSoroushId;
+    const supportPhone = CONFIG.adminSoroushId || "۰۹۰۲۵۱۳۱۵۰۶";
+    adminDisplay.textContent = supportPhone;
+    adminDisplay.href = "tel:+989025131506";
+    if (adminGuide) adminGuide.textContent = supportPhone;
 }
 
 function copyToClipboard(text, btn) {
